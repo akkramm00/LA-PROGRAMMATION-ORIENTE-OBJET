@@ -16,10 +16,20 @@ class Animal{
 }
 namespace chien;
 class Chien extends \animal\animal{
+	public function aboie(){
+		echo("Wouf");
+	}
 }
 namespace chat;
+class Chat extends \animal\animal{
+	public function miaule(){
+		echo("Miaou");
+	}
+}
 namespace main;
 $monChien = new \chien\Chien();
-$monChien->dort();
+$monChat = new \chat\Chat();
+$monChien->aboie();
+$monChat->miaule();
 
 ?>
